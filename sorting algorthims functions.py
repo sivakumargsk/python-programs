@@ -46,12 +46,29 @@ def shell_sort (a):
     return a
 
 def main() :
-    print selection_sort ([6,5,7,2,9,8,3,4,1])
-    print insertion_sort ([6,5,7,2,9,8,3,4,1])
-    print insertion_sort1 ([6,5,7,2,9,8,3,4,1])
-    print shell_sort ([6,5,7,2,9,8,3,4,1])
+    coll = [6,5,7,2,9,8,3,4,1]
+    print selection_sort (coll)
+    print insertion_sort (coll)
+    print insertion_sort1 (coll)
+    print shell_sort (coll)
  
 if __name__=='__main__' :
     main()    
 
+"""
+Note:(N means list length)
 
+worst-case for insertion sort is :
+ if the list requires ~(N^2/2) comparisions and  ~(N^2/2) exchanges for sorting a list.
+ example: Reverse ordered list.
+
+Best-case for insertion sort is:
+ if the list requires (N-1) camparisions and 0 exchanges for sorting a list.
+ example: 1.Sorted list
+          2.Partially sorted list
+          3.if list is having less no.of inversion paires
+          4.small list
+
+when compared to selection sort the insertion sort take less time to sort a list.
+
+shell sort takes very less time when compared to insertion sort depends upon type of list.
